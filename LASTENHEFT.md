@@ -12,7 +12,7 @@ Lokale Einzelbenutzung, synthetische Daten und ein vorführbarer kleiner Ablauf.
 
 ## Abnahmekriterien
 
-- [ ] A1 — Zwölf synthetische Bestellungen einlesen; Duplikat und ungültige Zeile mit Begründung ausweisen.
+- [x] A1 — Zwölf synthetische Bestellungen einlesen; Duplikat und ungültige Zeile mit Begründung ausweisen. P01-T01 am 31. Oktober 2026 geprüft; [Regeln und beobachtete Auffälligkeiten](DATENWOERTERBUCH.md).
 - [ ] A2 — SQL-Abfragen, Excel-Tabelle und Bericht liefern dieselben Summen.
 - [ ] A3 — Zwei DAX-Kennzahlen, Monatsfilter und eine Seite zur Datenqualität erstellen.
 - [ ] A4 — Den echten Power-BI-Bericht öffnen und die Power-Query-Schritte erklären.
