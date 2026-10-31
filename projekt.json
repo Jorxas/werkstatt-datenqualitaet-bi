@@ -1,0 +1,17 @@
+{
+  "id": "P01",
+  "status": "initialisiert",
+  "businessImplemented": false,
+  "fixture": "beispieldaten/bestellungen.csv",
+  "format": "csv",
+  "expectedRecords": 12,
+  "starter": "src/aufbereiten.py",
+  "command": "python src/aufbereiten.py",
+  "implementationTickets": [
+    "P01-T01",
+    "P01-T02",
+    "P01-T03",
+    "P01-T04"
+  ],
+  "language": "de"
+}
