@@ -52,12 +52,17 @@ def bestellungen_pruefen(zeilen):
             "auffaellige_zeilen": len(auffaelligkeiten), "auffaelligkeiten": auffaelligkeiten}
 
 
-def datei_pruefen(quelle):
+def datei_lesen(quelle):
+    """CSV einmal vollständig mit physischen Zeilennummern einlesen."""
     with Path(quelle).open(encoding="utf-8-sig", newline="") as datei:
         leser = csv.DictReader(datei)
         if len(leser.fieldnames or []) != len(FELDER) or set(leser.fieldnames or []) != set(FELDER):
             raise ValueError("Erwartete CSV-Spalten: " + ", ".join(FELDER))
-        return bestellungen_pruefen((leser.line_num, zeile) for zeile in leser)
+        return [(leser.line_num, zeile) for zeile in leser]
+
+
+def datei_pruefen(quelle):
+    return bestellungen_pruefen(datei_lesen(quelle))
 
 
 def main():

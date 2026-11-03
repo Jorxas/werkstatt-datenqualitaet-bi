@@ -5,8 +5,8 @@
   "fixture": "beispieldaten/bestellungen.csv",
   "format": "csv",
   "expectedRecords": 12,
-  "starter": "src/aufbereiten.py",
-  "command": "python -X utf8 src/aufbereiten.py",
+  "starter": "src/arbeitsdatenbank.py",
+  "command": "uv run --offline --python 3.12 python -X utf8 src/arbeitsdatenbank.py",
   "implementationTickets": [
     "P01-T01",
     "P01-T02",
@@ -15,6 +15,7 @@
   ],
   "language": "de",
   "implementedScope": [
-    "P01-T01"
+    "P01-T01",
+    "P01-T02"
   ]
 }

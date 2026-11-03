@@ -1,0 +1,21 @@
+{
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "quellzeilen": 12,
+  "quelle_sha256": "e1312cf41f5693d9b39f2444bfc3367305d5da2b84e5e20845d39c77483069d5",
+  "integritaet": "ok",
+  "ablehnungen": [
+    {
+      "csv_zeile": 12,
+      "originalwerte_json": "{\"bestellung_id\": \"B10\", \"datum\": \"2026-02-06\", \"kategorie\": \"wartung\", \"betrag\": \"110\"}",
+      "gruende_json": "[\"Bestellkennung B10 bereits in CSV-Zeile 11 vorhanden.\"]"
+    },
+    {
+      "csv_zeile": 13,
+      "originalwerte_json": "{\"bestellung_id\": \"\", \"datum\": \"2026-02-07\", \"kategorie\": \"ersatzteile\", \"betrag\": \"\"}",
+      "gruende_json": "[\"Bestellkennung fehlt.\", \"Betrag fehlt.\"]"
+    }
+  ],
+  "tests_erfolgreich": true,
+  "testanzahl": 6
+}
