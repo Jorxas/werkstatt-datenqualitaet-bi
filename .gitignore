@@ -1,0 +1,15 @@
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+bin/
+obj/
+build/
+dist/
+.angular/
+.env
+.env.*
+**/ausgabe/
+**/.laufzeit/
+**/nachweise/*.json
+**/nachweise/*.txt

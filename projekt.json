@@ -1,0 +1,21 @@
+{
+  "id": "P01",
+  "status": "in-arbeit",
+  "businessImplemented": true,
+  "fixture": "beispieldaten/bestellungen.csv",
+  "format": "csv",
+  "expectedRecords": 12,
+  "starter": "src/arbeitsdatenbank.py",
+  "command": "uv run --offline --python 3.12 python -X utf8 src/arbeitsdatenbank.py",
+  "implementationTickets": [
+    "P01-T01",
+    "P01-T02",
+    "P01-T03",
+    "P01-T04"
+  ],
+  "language": "de",
+  "implementedScope": [
+    "P01-T01",
+    "P01-T02"
+  ]
+}

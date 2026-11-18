@@ -1,0 +1,37 @@
+{
+  "eingelesene_zeilen": 12,
+  "uebernommene_zeilen": 10,
+  "abgelehnte_zeilen": 2,
+  "auswertungen": {
+    "gesamtumsatz": [
+      {
+        "bestellungen": 10,
+        "umsatz_cent": 82000
+      }
+    ],
+    "monatsumsaetze": [
+      {
+        "monat": "2026-01",
+        "bestellungen": 4,
+        "umsatz_cent": 34000
+      },
+      {
+        "monat": "2026-02",
+        "bestellungen": 6,
+        "umsatz_cent": 48000
+      }
+    ],
+    "kategorieumsaetze": [
+      {
+        "kategorie": "ersatzteile",
+        "bestellungen": 5,
+        "umsatz_cent": 32000
+      },
+      {
+        "kategorie": "wartung",
+        "bestellungen": 5,
+        "umsatz_cent": 50000
+      }
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+    "projekt":  "P01",
+    "ticket":  "P01-T02",
+    "fertigstellung":  "2026-11-02T00:04:29.5917187+01:00",
+    "gemesseneAssistentenzeitSekunden":  237.5,
+    "studentischeSchaetzungMinuten":  75,
+    "veroeffentlichung":  "ausstehend; übergeordneter Dienst",
+    "dateien":  [
+                    {
+                        "pfad":  "README.md",
+                        "sha256":  "ee5e26e9195d938b705bf1e26efe9e4561aa49bf27aee2539dd7082b039bb753"
+                    },
+                    {
+                        "pfad":  "START.md",
+                        "sha256":  "6d478ba59bcf525dc69e140980bf7d2762e281ba71304cc4d9dae41325de5b6f"
+                    },
+                    {
+                        "pfad":  "ARBEITSJOURNAL.md",
+                        "sha256":  "f0a8b4c5088fe98d7efce0ecc909cd8811cd9c01a3a8f73970ae994d73762ed0"
+                    },
+                    {
+                        "pfad":  "projekt.json",
+                        "sha256":  "895b8b7e12a7ddd13a4ce0351ff554ed5df21cf2e42a994aa987f49678d6d245"
+                    },
+                    {
+                        "pfad":  "tickets/P01-T02.md",
+                        "sha256":  "fe4948588b8f7da8b06a466519c55b8963acaddb3dde92576106249e6f4ba3f0"
+                    },
+                    {
+                        "pfad":  "src/aufbereiten.py",
+                        "sha256":  "170449e160c2fd50bf1b2beaceddd02994b5fac4403238c2baa289da38081775"
+                    },
+                    {
+                        "pfad":  "src/arbeitsdatenbank.py",
+                        "sha256":  "74a0c144ea7804fc11b67ebd4320a6db1c54751c672f38fc210637936ceff741"
+                    },
+                    {
+                        "pfad":  "sql/schema.sql",
+                        "sha256":  "6d395a9041ebc4c0faf862b4ecf4329ca72973f18a85b033d2233c73e3c9894f"
+                    },
+                    {
+                        "pfad":  "sql/gesamtumsatz.sql",
+                        "sha256":  "e49452f3c8182043492680c856275711f97d1edc5282c4077841db7e441207bc"
+                    },
+                    {
+                        "pfad":  "sql/monatsumsaetze.sql",
+                        "sha256":  "58b2829b307b33e2c5d8ef6d0f6883b488b7dc0757f540b4409ac90076f1f587"
+                    },
+                    {
+                        "pfad":  "sql/kategorieumsaetze.sql",
+                        "sha256":  "3d5b38ec90a06e0c98e43cc6bf9585cc16c821827d887b394ed201d54f261600"
+                    },
+                    {
+                        "pfad":  "tests/test_arbeitsdatenbank.py",
+                        "sha256":  "eff0a160dbd795679b1d959f0cc9ddf8c9f079bf3cf683ae4a942d3708da9f1b"
+                    },
+                    {
+                        "pfad":  "tests/test_bestellungen.py",
+                        "sha256":  "b1f9c541987255c50c7a79fdbb981304a70331741788d02c2f274606a7feb19f"
+                    },
+                    {
+                        "pfad":  "beispieldaten/bestellungen.csv",
+                        "sha256":  "e1312cf41f5693d9b39f2444bfc3367305d5da2b84e5e20845d39c77483069d5"
+                    },
+                    {
+                        "pfad":  "LASTENHEFT.md",
+                        "sha256":  "d29990e5f318413e581cff4f036ac082df0fbe43a177079e678f06df6b5c1674"
+                    },
+                    {
+                        "pfad":  "nachweise/P01-T02-abnahme.md",
+                        "sha256":  "369fe146c428a24763bf1f1fd86ea6dad73db5b15731a7e5a66f87bc9e990341"
+                    },
+                    {
+                        "pfad":  "nachweise/P01-T02-auswertungen.json",
+                        "sha256":  "8e92e28f3c98f879cff8fab646b7d996faa97ced6459ce2a8ff2ecdce78ed9a3"
+                    },
+                    {
+                        "pfad":  "nachweise/P01-T02-tests.txt",
+                        "sha256":  "581aec6216f584949a5617caa5660517f8cf141d85d09bc44b0e1713b8b2c892"
+                    },
+                    {
+                        "pfad":  "nachweise/P01-T02-tests-erster-lauf.txt",
+                        "sha256":  "c0150ba900c5e8ed374afc0b340b6e3b997628f4782b84ecb69b6472e13b9cd2"
+                    },
+                    {
+                        "pfad":  "nachweise/P01-T02-kontrolle.json",
+                        "sha256":  "10e75af827b03d532f54fc9ac241f4118edd1bdd45be2de62dfb0d299c5bf318"
+                    },
+                    {
+                        "pfad":  "nachweise/P01-T02-quelle-vorher.txt",
+                        "sha256":  "7e615a93648270604c4a72a65425e62ca10776d57a738b4021fa6adb5c57b81d"
+                    },
+                    {
+                        "pfad":  "nachweise/P01-T02-pruefen.py",
+                        "sha256":  "5a5505ab76e884b00297f8ab0b3b8630b413fe5fc65d06858f1ecb5b975d290f"
+                    },
+                    {
+                        "pfad":  "nachweise/P01-T02-werkstatt.sqlite",
+                        "sha256":  "e3ad0864bc96224226d89a2ed73223fb77768d5e5de6f98c92b5e85c7badddbf"
+                    }
+                ]
+}
