@@ -1,32 +1,47 @@
-# Datenqualität und Kennzahlen einer Werkstatt
+# Werkstattdaten: Datenqualität und Kennzahlen
 
-Stand: 2. November 2026 — **in Arbeit; P01-T01 und P01-T02 abgeschlossen**. CSV-Prüfung, SQLite-Arbeitsdatenbank und drei SQL-Auswertungen vorhanden. Die restliche Basis ist offen. Geplanter Abschluss der Basis: spätestens 8. November 2026. Geschätzter Basisaufwand: 5 Stunden ohne Einrichtung und Erweiterungen.
+Bestellungen einer Werkstatt enthalten Dubletten und fehlerhafte Beträge. Auswertungen sollen trotzdem nachvollziehbar und zwischen SQL, Excel und Power BI vergleichbar sein.
 
-Eine kleine Werkstatt möchte Umsätze auswerten und doppelte oder unvollständige Bestellungen erkennen.
+![Projektaufbau](dokumentation/ueberblick.svg)
 
-Ergebnis: Bereinigte CSV-Datei, drei SQL-Abfragen, zwei lokale Power-BI-Berichtsseiten und eine kleine VBA-Prüfung.
+**Veröffentlichungsstand: Phase 2/4.** Dieses eigenständige Repository übernimmt zunächst den bereits lokal committeten Stand. Weitere fachliche Phasen werden im Abstand von mindestens vier Stunden veröffentlicht. Die technische Entwicklung und die öffentliche Veröffentlichung haben unterschiedliche echte Zeitpunkte.
 
-Vorgesehene Technologien: SQL, Excel, Power Query, Power BI, DAX, VBA. Eine Nennung ist kein Nachweis einer Umsetzung.
+## Was hier zu sehen ist
 
-## Einstieg
+| Schritt | Inhalt | Hier veröffentlicht |
+|---|---|---|
+| 1 | CSV-Vertrag und Datenqualität | Ja |
+| 2 | SQLite-Import und drei Auswertungen | Ja |
+| 3 | Power-BI-Bericht mit Power Query und DAX | Folgt |
+| 4 | Excel/VBA und Abgleich aller sieben Kennzahlen | Folgt |
 
-1. [Lastenheft](LASTENHEFT.md) lesen.
-2. [Abgeschlossenen SQLite-Auftrag](tickets/P01-T02.md) ansehen; nächster offener Auftrag ist P01-T03, erst in einer späteren freigegebenen Einheit.
-3. [Technischen Einstieg](START.md) prüfen und ein Ticket nach dem anderen bearbeiten.
-4. [Arbeitsjournal](ARBEITSJOURNAL.md) und echte Nachweise aktualisieren.
+## Fachlicher Nutzen
 
-Abhängigkeiten: keine weiteren Projekte.
+Datenbereinigung, SQL, Kennzahlenabgleich und erklärbare BI-Berichte.
 
-## Geprüfter Teilumfang
+## Lokal starten
 
-Die Prüfung liest zwölf Zeilen, meldet das Duplikat in CSV-Zeile 12 und fehlende Pflichtwerte in CSV-Zeile 13. Die Originaldatei bleibt unverändert. [Datenwörterbuch](DATENWOERTERBUCH.md), [Start und Prüfung](START.md) sowie [Arbeitsjournal](ARBEITSJOURNAL.md) beschreiben diesen Teilfortschritt.
+Im geklonten Repository ausführen; die benötigte Laufzeit muss installiert sein. Python-Beispiele verwenden 3.12, Node-Beispiele 24 und C# die im Projekt angegebene .NET-Version. Befehle mit uv laden die dort genau bezeichneten Pakete bei Bedarf.
 
-P01-T02 lädt zehn Bestellungen in `ausgabe/werkstatt.sqlite`. Die Tabelle `abgelehnte_zeilen` enthält die beiden übrigen Zeilen mit Originalwerten und Gründen. Gesamtumsatz: 820,00 Euro; Januar: 340,00 Euro, Februar: 480,00 Euro; Ersatzteile: 320,00 Euro, Wartung: 500,00 Euro. Drei SQL-Dateien unter `sql/` liefern diese Auswertungen. [Lokale Abnahme](nachweise/P01-T02-abnahme.md): sechs Tests erfolgreich, zwölf Originalzeilen unverändert.
+```powershell
+python -X utf8 src/arbeitsdatenbank.py
+python -X utf8 -m unittest discover -s tests -v
+```
 
-Nach diesem Endpunkt angehalten. Bereinigungsexport, Power BI, DAX und Excel/VBA sind offen. Das übergreifende Lastenheftkriterium A2 bleibt ungeprüft, weil der Vergleich mit Excel und Power BI noch fehlt. Es wird keine praktische Verwendung dieser Produkte behauptet.
+Ausführliche technische Befehle: [START.md](START.md). [Öffentlicher Prüfstand](ABNAHME.json) und [Quellphasen](VERLAUF.json) dokumentieren Herkunft und echte Ausführungsdaten. Eine neue Repositorykopie ist kein neuer nativer Desktoplauf.
 
-[Erweiterungen](VARIANTEN.md) haben einen eigenen Umsetzungsstand. [Private Unternehmenszuordnung](UNTERNEHMEN.lokal.md) bleibt außerhalb der Git-Verwaltung.
+## Ergebnis des lokal geprüften Schlussstands
 
-## Projektsprache
+12 synthetische Zeilen, 10 gültige Bestellungen, 2 Ablehnungen, 820 EUR; Monatswerte 340 und 480 EUR.
 
-Dokumentation, selbst gewählte Bezeichner, Kommentare, Meldungen und Beispieldaten werden auf Deutsch geschrieben. Festgelegte API-Schlüssel, Sprachsyntax und Produktnamen bleiben unverändert.
+**Dieser Schlussstand ist lokal bereits geprüft, aber noch nicht vollständig in diesem Repository veröffentlicht.** Maßgeblich für den hier verfügbaren Code ist die Phasentabelle oben.
+
+## Grenzen
+
+Synthetische Daten; kein Cloud-BI-Projekt. Desktopdateien benötigen die genannten Produkte.
+
+Eigenes kleines Lernprojekt mit synthetischen Daten, mit KI-Unterstützung entwickelt und geprüft. Keine Aussage über Berufserfahrung, menschliche Arbeitsstunden oder praktische Verwendung weiterer nur geplanter Produkte.
+
+## Entwicklungshistorie
+
+[Entwicklungshistorie](HISTORIE.md): die vorhandenen lokalen Änderungen, ihre ursprünglichen Daten und die spätere GitHub-Übernahme.
