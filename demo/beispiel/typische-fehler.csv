@@ -1,0 +1,11 @@
+bestellung_id,datum,kategorie,betrag
+T01,2026-03-02,ersatzteile,12.50
+T02,2026-03-03,wartung,0.10
+T03,2026-03-03,wartung,0.20
+T04,2026-03-05,ersatzteile,-15
+T05,2026-02-30,wartung,80
+T06,2026-03-07,reparatur,60
+T07,2026-03-08,ersatzteile,19.999
+T08,2026-03-09,wartung,45,zusatz
+T09,2026-03-10,ersatzteile,abc
+T10,2026-03-11,wartung,200

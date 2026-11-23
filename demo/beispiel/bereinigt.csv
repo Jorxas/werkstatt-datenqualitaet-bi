@@ -1,0 +1,11 @@
+bestellung_id,datum,kategorie,betrag
+B01,2026-01-02,ersatzteile,120
+B02,2026-01-04,wartung,80
+B03,2026-01-05,ersatzteile,40
+B04,2026-01-06,wartung,100
+B05,2026-02-01,ersatzteile,60
+B06,2026-02-02,wartung,120
+B07,2026-02-03,ersatzteile,30
+B08,2026-02-04,wartung,90
+B09,2026-02-05,ersatzteile,70
+B10,2026-02-06,wartung,110

@@ -15,6 +15,21 @@ Bestellungen einer Werkstatt enthalten Dubletten und fehlerhafte Beträge. Auswe
 | 3 | Power-BI-Bericht mit Power Query und DAX | Folgt |
 | 4 | Excel/VBA und Abgleich aller sieben Kennzahlen | Folgt |
 
+## Demo
+
+Live: <https://jorxas.github.io/werkstatt-datenqualitaet-bi/> (Deutsch, per Schalter auch Französisch).
+
+Anwendungsfall: Eine Werkstatt exportiert Bestellungen als CSV und will wissen, welche Zeilen verlässlich sind und welcher Umsatz daraus folgt. Die Seite zeigt vier Eingabedateien, jede Zeile mit Prüfergebnis und Ablehnungsgrund, die drei SQL-Auswertungen und die gespeicherten SQLite-Tabellen. Alle Zahlen stammen aus echten Läufen von `src/aufbereiten.py`, `src/arbeitsdatenbank.py` und den Unit-Tests; die Seite selbst rechnet nichts nach. Power BI und Excel/VBA (Phasen 3 und 4) sind nicht Teil der Demo.
+
+Neu erzeugen (schreibt `demo/daten.js`) und prüfen:
+
+```powershell
+uv run --offline --python 3.12 python -X utf8 -B demo/erzeugen.py
+node demo/browser-pruefen.cjs   # braucht puppeteer-core (NODE_PATH) und Chrome oder Edge
+```
+
+Die Quellen liegen in `demo/`; veröffentlicht werden `index.html`, `stil.css`, `app.js` und `daten.js` über den Zweig `gh-pages`. Die Dateien in `demo/beispiel/` (außer der Projekt-CSV) wurden nur für die Demo ergänzt.
+
 ## Fachlicher Nutzen
 
 Datenbereinigung, SQL, Kennzahlenabgleich und erklärbare BI-Berichte.
