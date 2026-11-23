@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<title>Werkstattdaten Demo</title>
+<meta name="description" content="Echte Ausgabe des Projekts: CSV-Bestellungen prüfen, in SQLite laden und auswerten.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234338ca'/%3E%3Cpath d='M7 22V14h4v8zm7 0V9h4v13zm7 0v-6h4v6z' fill='white'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="skip" href="#inhalt" data-i18n="skip">Zum Inhalt</a>
+<header class="kopf">
+  <div class="kopfzeile">
+    <a class="repo" href="https://github.com/Jorxas/werkstatt-datenqualitaet-bi" rel="noopener" data-i18n="repo">Quellcode auf GitHub</a>
+    <div class="sprache" role="group" aria-label="Sprache / Langue">
+      <button type="button" data-sprache="de" aria-pressed="true">DE</button>
+      <button type="button" data-sprache="fr" aria-pressed="false">FR</button>
+    </div>
+  </div>
+  <p class="marke" data-i18n="marke">Lernprojekt · synthetische Daten</p>
+  <h1 data-i18n="titel">Werkstattdaten: Datenqualität und Kennzahlen</h1>
+  <p class="einleitung" data-i18n="einleitung"></p>
+</header>
+
+<main id="inhalt">
+  <section aria-labelledby="h-eingabe">
+    <h2 id="h-eingabe"><span class="nr">1</span> <span data-i18n="h_eingabe">Eingabe wählen</span></h2>
+    <p class="hinweis" data-i18n="eingabe_text"></p>
+    <div id="auswahl" class="auswahl" role="group" aria-labelledby="h-eingabe"></div>
+    <p id="auswahl-text" class="auswahl-text" aria-live="polite"></p>
+  </section>
+
+  <section aria-labelledby="h-pruefung">
+    <h2 id="h-pruefung"><span class="nr">2</span> <span data-i18n="h_pruefung">Prüfung jeder CSV-Zeile</span></h2>
+    <p class="echt"><span class="siegel" data-i18n="siegel">Ausgabe eines echten Laufs des Projekts</span> <code>src/aufbereiten.py</code></p>
+    <div id="zaehler" class="zaehler"></div>
+    <div class="tabelle" tabindex="0" role="region" data-i18n-label="lab_csv">
+      <table id="csv-tabelle">
+        <caption class="nur-leser" data-i18n="cap_csv">CSV-Zeilen mit Prüfergebnis</caption>
+        <thead><tr>
+          <th scope="col" data-i18n="th_zeile">Zeile</th>
+          <th scope="col" data-i18n="th_inhalt">Inhalt der CSV</th>
+          <th scope="col" data-i18n="th_urteil">Ergebnis</th>
+          <th scope="col" data-i18n="th_meldung">Meldung des Programms</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="fussnote" id="meldungen-hinweis" data-i18n="meldungen_hinweis"></p>
+  </section>
+
+  <section aria-labelledby="h-sql">
+    <h2 id="h-sql"><span class="nr">3</span> <span data-i18n="h_sql">SQLite und drei SQL-Auswertungen</span></h2>
+    <p class="echt"><span class="siegel" data-i18n="siegel">Ausgabe eines echten Laufs des Projekts</span> <code>src/arbeitsdatenbank.py</code></p>
+    <p class="hinweis" data-i18n="sql_text"></p>
+    <div class="kennzahlen">
+      <div class="karte kpi">
+        <h3 data-i18n="k_gesamt">Gesamtumsatz</h3>
+        <p class="gross" id="kpi-summe">–</p>
+        <p class="klein" id="kpi-anzahl"></p>
+        <details><summary data-i18n="sql_zeigen">SQL anzeigen</summary><pre id="sql-gesamt"></pre></details>
+      </div>
+      <div class="karte">
+        <h3 data-i18n="k_monat">Umsatz je Monat</h3>
+        <div id="balken-monat" class="balken"></div>
+        <details><summary data-i18n="sql_zeigen">SQL anzeigen</summary><pre id="sql-monat"></pre></details>
+      </div>
+      <div class="karte">
+        <h3 data-i18n="k_kategorie">Umsatz je Kategorie</h3>
+        <div id="balken-kategorie" class="balken"></div>
+        <details><summary data-i18n="sql_zeigen">SQL anzeigen</summary><pre id="sql-kategorie"></pre></details>
+      </div>
+    </div>
+    <details class="tabellen">
+      <summary data-i18n="gespeichert">Gespeicherte Tabellen in der Datenbank</summary>
+      <h3 data-i18n="t_bestellungen">Tabelle bestellungen (übernommen)</h3>
+      <div class="tabelle" tabindex="0" role="region" data-i18n-label="lab_best">
+        <table id="tab-bestellungen">
+          <caption class="nur-leser" data-i18n="cap_best">Übernommene Bestellungen</caption>
+          <thead><tr><th scope="col">bestellung_id</th><th scope="col">csv_zeile</th><th scope="col">datum</th><th scope="col">kategorie</th><th scope="col">betrag_cent</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 data-i18n="t_abgelehnt">Tabelle abgelehnte_zeilen</h3>
+      <div class="tabelle" tabindex="0" role="region" data-i18n-label="lab_abg">
+        <table id="tab-abgelehnt">
+          <caption class="nur-leser" data-i18n="cap_abg">Abgelehnte Zeilen</caption>
+          <thead><tr><th scope="col">csv_zeile</th><th scope="col">originalwerte_json</th><th scope="col">gruende_json</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+
+  <section aria-labelledby="h-erklaerung">
+    <h2 id="h-erklaerung" data-i18n="h_erklaerung">Das Projekt in vier Punkten</h2>
+    <div class="vier">
+      <article class="karte"><h3 data-i18n="e_aufgabe_h">Aufgabe</h3><p data-i18n="e_aufgabe"></p></article>
+      <article class="karte"><h3 data-i18n="e_daten_h">Daten</h3><p data-i18n="e_daten"></p></article>
+      <article class="karte"><h3 data-i18n="e_ergebnis_h">Ergebnis</h3><p data-i18n="e_ergebnis"></p></article>
+      <article class="karte"><h3 data-i18n="e_grenzen_h">Grenzen</h3><p data-i18n="e_grenzen"></p></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-ehrlich">
+    <h2 id="h-ehrlich" data-i18n="h_ehrlich">Was wirklich ausgeführt wurde</h2>
+    <div class="zwei">
+      <div class="karte">
+        <h3 data-i18n="a_lief">Ausgeführt</h3>
+        <ul id="lief"></ul>
+      </div>
+      <div class="karte">
+        <h3 data-i18n="a_nicht">Nicht ausgeführt, nicht enthalten</h3>
+        <ul id="nicht"></ul>
+      </div>
+    </div>
+    <details class="karte tests">
+      <summary id="tests-titel"></summary>
+      <ul id="tests-liste"></ul>
+    </details>
+    <p class="fussnote" id="nachbau"></p>
+    <pre class="befehl" id="befehl">uv run --offline --python 3.12 python -X utf8 -B demo/erzeugen.py</pre>
+  </section>
+</main>
+<footer class="fuss">
+  <p data-i18n="fuss">Eigenes Lernprojekt, mit KI-Unterstützung entwickelt und geprüft. Keine Aussage über Berufserfahrung oder praktischen Einsatz.</p>
+</footer>
+<script src="daten.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
