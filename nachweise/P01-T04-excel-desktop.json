@@ -1,0 +1,19 @@
+{
+  "zeitpunkt": "2026-11-17T23:18:18.941Z",
+  "fenster": {
+    "app": "Microsoft.Office.EXCEL.EXE.15",
+    "id": 8984096,
+    "title": "Classeur1 - Excel"
+  },
+  "bildschirm": [
+    {
+      "height": 738,
+      "id": "screenshot-0",
+      "originX": 3040,
+      "originY": 274,
+      "width": 1266,
+      "zIndex": 0
+    }
+  ],
+  "beobachtung": "Werkstatt.xlsm lokal gespeichert. Auswertung: sieben native Formelwerte 820/10/2/340/480/320/500, Vergleich gleich; ein unvollständiger und ein doppelter Datensatz. Zweiter Bildschirm."
+}

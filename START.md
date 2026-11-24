@@ -85,3 +85,24 @@ Die offizielle Brücke ist @microsoft/powerbi-desktop-bridge-cli 1.0.0; lokal vo
 **src/bericht_erstellen.cjs** dokumentiert die ursprüngliche Erstellung auf Grundlage eines mit @microsoft/powerbi-report-authoring-cli 0.5.0 erzeugten Gerüsts. Nicht unbedacht erneut ausführen: Es überschreibt die selbst erzeugten Berichts- und Modelldefinitionen. Der eingecheckte native Speicherstand ist der Lieferstand. Für spätere Anpassungen die kleinen PBIR-Dateien bearbeiten oder Desktop verwenden, dann tatsächlich neu prüfen.
 
 Quellen: [Microsoft PBIP-Modellformat](https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-dataset), [Berichtsformat](https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-report), [offizielle Desktop-Brücke](https://github.com/microsoft/skills-for-fabric/tree/main/cli/powerbi-desktop-bridge-cli), [ADOMD.NET](https://learn.microsoft.com/en-us/analysis-services/adomd/multidimensional-models/adomd-net-client-programming).
+
+## P01-T04 — Excel/VBA und Dreiervergleich
+
+Die lokal gespeicherte Datei **excel/Werkstatt.xlsm** in Excel öffnen. Sie enthält Bestellungen und Auswertung; sieben Formeln liefern 820 / 10 / 2 / 340 / 480 / 320 / 500. Der mitgelieferte Code steht lesbar in **excel/Bestellpruefung.bas**. Tatsächlich unter Excel 16.0 ausgeführt; die Produktoberfläche war Französisch, eigene Inhalte sind Deutsch.
+
+Alt+F8 → BestellungenPruefen → ursprüngliche beispieldaten/bestellungen.csv auswählen. Abbrechen beendet die Funktion vor jeder Tabellenänderung. Für die manuelle Neuerstellung einen eigenen leeren Arbeitsstand benutzen: Alt+F11, Datei importieren (Strg+M), Bestellpruefung.bas wählen, anschließend das öffentliche Makro ausführen und als XLSM speichern. Keine Makrosicherheit, vertrauenswürdigen Speicherorte oder programmgesteuerten VBOM-Zugriff ändern. Bei einer Sicherheits- oder Lizenzsperre anhalten und die Einschränkung dokumentieren.
+
+Die kleine Routine liest die zwölf einfachen ASCII-CSV-Daten mit LF oder CRLF, prüft Pflichtwerte, Wiederholungen, Datum, Kategorie und centgenauen nicht negativen Betrag. Rohwerte bleiben als Text sichtbar, gültige Beträge werden als ganze Cent erfasst. Die Auswertung rechnet mit SUM, COUNTIF und SUMIF; Formula ist die vorgeschriebene englische VBA-API-Syntax. Sieben Werte werden mit den erwarteten SQL-/Power-BI-Ergebnissen verglichen. Danach schreibt das Makro ein eigenes JSON-Protokoll mit lokaler Laufzeit nach nachweise/P01-T04-excel-JJJJMMTT-HHMMSS.json. Keine erfundene UTC-Zeit: der Bericht nennt Europe/Berlin.
+
+Grenze: zwölf vorgegebene Zeilen, einfache Felder ohne Anführungszeichen, eingebettete Kommas oder nicht-ASCII-Zeichen. Für andere CSV-Verträge zuerst den Python-Prüfer verwenden. Keine allgemeine Importanwendung, Signatur oder Organisationsrichtlinie. Lokale Änderungen an Auswertung und Prüfspalten werden beim nächsten bewusst gestarteten Lauf erneuert; keine fremde Arbeitsmappe verwenden. Eine Änderung der Originaldatei wird nicht vorgenommen.
+
+Gespeicherten Stand unabhängig abgleichen:
+
+~~~powershell
+uv run --offline --python 3.12 python -X utf8 -m unittest discover -s tests -v
+uv run --offline --python 3.12 python -X utf8 pruefungen/abgleich_pruefen.py
+~~~
+
+Der zweite Prüfer startet SQL wirklich neu und kontrolliert die zuvor tatsächlich ausgeführten DAX-/VBA-Protokolle, den eingebetteten VBA-Code und alle sieben nativen Formelcachewerte in XLSM. Die ursprünglichen Produktzeitpunkte bleiben erhalten. Das ist eine erneute Dateiabnahme, kein automatisch neuer Excel-/Power-BI-Lauf. Für frische Produktläufe die obigen nativen Abläufe bzw. PowerBI_pruefen.ps1 ausführen.
+
+Quellen: [Excel Range.Formula](https://learn.microsoft.com/en-us/office/vba/api/excel.range.formula), [Worksheet.Calculate](https://learn.microsoft.com/en-us/office/vba/api/excel.worksheet.calculate(method)), [Makrofähiges Dateiformat](https://support.microsoft.com/en-us/excel/save-a-workbook-in-another-file-format).

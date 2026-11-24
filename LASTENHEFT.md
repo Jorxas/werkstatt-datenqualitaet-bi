@@ -13,7 +13,7 @@ Lokale Einzelbenutzung, synthetische Daten und ein vorführbarer kleiner Ablauf.
 ## Abnahmekriterien
 
 - [x] A1 — Zwölf synthetische Bestellungen einlesen; Duplikat und ungültige Zeile mit Begründung ausweisen. P01-T01 am 31. Oktober 2026 geprüft; [Regeln und beobachtete Auffälligkeiten](DATENWOERTERBUCH.md).
-- [ ] A2 — SQL-Abfragen, Excel-Tabelle und Bericht liefern dieselben Summen.
+- [x] A2 — SQL-Abfragen, Excel-Tabelle und Bericht liefern dieselben Summen.
 - [x] A3 — Zwei DAX-Kennzahlen, Monatsfilter und eine Seite zur Datenqualität erstellen.
 - [x] A4 — Den echten Power-BI-Bericht öffnen und die Power-Query-Schritte erklären.
 
@@ -46,3 +46,5 @@ Eigenes Lernprojekt zu Datenqualität und Berichten; Power BI, DAX und VBA erst 
 Derzeit zutreffend: „Eigenes Lernprojekt in Vorbereitung: Datenqualität und Kennzahlen einer Werkstatt“. „Umgesetzt“ setzt die tatsächliche Abnahme voraus.
 
 P01-T03: echte Desktop-Ausführung, Speicherung, erneutes Öffnen, fünf DAX-Abfragen und sichtbarer Januarfilter am 17./18. November 2026 geprüft. A2 wartet auf Excel/VBA.
+
+P01-T04 am 18. November 2026: native VBA-Ausführung erfolgreich, XLSM gespeichert, sieben tatsächliche Formelwerte mit neuem SQL-Lauf und echtem DAX-Nachweis identisch. Nachweise P01-T04-abgleich.json und P01-T04-excel-desktop.*. Damit A1–A4 im beschriebenen lokalen Basisumfang erfüllt.

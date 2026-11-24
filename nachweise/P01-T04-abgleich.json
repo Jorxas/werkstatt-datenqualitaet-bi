@@ -1,0 +1,56 @@
+{
+  "zeitpunkt": "2026-11-17T23:18:32.245228+00:00",
+  "erfolgreich": true,
+  "pruefung": "Aktueller SQL-Lauf sowie gespeicherte echte DAX-/VBA-Läufe und native Formelwerte verglichen; keine erneute Excel-/Power-BI-Ausführung durch diesen Prüfer.",
+  "urspruenglicher_vba_zeitpunkt": "2026-11-18 00:15:35",
+  "urspruenglicher_dax_zeitpunkt": "2026-11-17T23:03:00.1011568+00:00",
+  "excel_nachweis": "P01-T04-excel-20261118-001535.json",
+  "quellhash": "e1312cf41f5693d9b39f2444bfc3367305d5da2b84e5e20845d39c77483069d5",
+  "arbeitsmappe_sha256": "0e9eab48dc5d48b0e2d2e060c1a9744963b05828337a5a5fa9f293ec4408c8ad",
+  "abgleich": [
+    "820",
+    "10",
+    "2",
+    "340",
+    "480",
+    "320",
+    "500"
+  ],
+  "gespeicherte_formeln": [
+    {
+      "zelle": "B3",
+      "formel": "SUM(Bestellungen!F2:F13)/100",
+      "wert": "820"
+    },
+    {
+      "zelle": "B4",
+      "formel": "COUNTIF(Bestellungen!E2:E13,\"gueltig\")",
+      "wert": "10"
+    },
+    {
+      "zelle": "B5",
+      "formel": "COUNTIF(Bestellungen!E2:E13,\"abgelehnt\")",
+      "wert": "2"
+    },
+    {
+      "zelle": "B6",
+      "formel": "SUMIF(Bestellungen!G2:G13,\"2026-01\",Bestellungen!F2:F13)/100",
+      "wert": "340"
+    },
+    {
+      "zelle": "B7",
+      "formel": "SUMIF(Bestellungen!G2:G13,\"2026-02\",Bestellungen!F2:F13)/100",
+      "wert": "480"
+    },
+    {
+      "zelle": "B8",
+      "formel": "SUMIF(Bestellungen!C2:C13,\"ersatzteile\",Bestellungen!F2:F13)/100",
+      "wert": "320"
+    },
+    {
+      "zelle": "B9",
+      "formel": "SUMIF(Bestellungen!C2:C13,\"wartung\",Bestellungen!F2:F13)/100",
+      "wert": "500"
+    }
+  ]
+}

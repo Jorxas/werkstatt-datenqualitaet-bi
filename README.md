@@ -4,7 +4,7 @@ Bestellungen einer Werkstatt enthalten Dubletten und fehlerhafte Beträge. Auswe
 
 ![Projektaufbau](dokumentation/ueberblick.svg)
 
-**Veröffentlichungsstand: Phase 3/4.** Dieses eigenständige Repository veröffentlicht zuvor lokal entwickelte, geprüfte und unveränderlich gesicherte Stände. Weitere fachliche Phasen werden im Abstand von mindestens vier Stunden veröffentlicht. Die technische Entwicklung und die öffentliche Veröffentlichung haben unterschiedliche echte Zeitpunkte.
+**Veröffentlichungsstand: Phase 4/4.** Dieses eigenständige Repository veröffentlicht zuvor lokal entwickelte, geprüfte und unveränderlich gesicherte Stände. Alle vier dokumentierten Basisphasen sind veröffentlicht. Die technische Entwicklung und die öffentliche Veröffentlichung haben unterschiedliche echte Zeitpunkte.
 
 ## Was hier zu sehen ist
 
@@ -13,7 +13,7 @@ Bestellungen einer Werkstatt enthalten Dubletten und fehlerhafte Beträge. Auswe
 | 1 | CSV-Vertrag und Datenqualität | Ja |
 | 2 | SQLite-Import und drei Auswertungen | Ja |
 | 3 | Power-BI-Bericht mit Power Query und DAX | Ja |
-| 4 | Excel/VBA und Abgleich aller sieben Kennzahlen | Folgt |
+| 4 | Excel/VBA und Abgleich aller sieben Kennzahlen | Ja |
 
 ## Demo
 
@@ -50,8 +50,6 @@ Ausführliche technische Befehle: [START.md](START.md). [Öffentlicher Prüfstan
 ## Ergebnis des lokal geprüften Schlussstands
 
 12 synthetische Zeilen, 10 gültige Bestellungen, 2 Ablehnungen, 820 EUR; Monatswerte 340 und 480 EUR.
-
-**Dieser Schlussstand ist lokal bereits geprüft, aber noch nicht vollständig in diesem Repository veröffentlicht.** Maßgeblich für den hier verfügbaren Code ist die Phasentabelle oben.
 
 ## Grenzen
 

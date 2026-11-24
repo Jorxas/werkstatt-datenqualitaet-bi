@@ -1,6 +1,6 @@
 {
   "id": "P01",
-  "status": "P01-T03 geprüft; Excel/VBA in P01-T04 offen",
+  "status": "basis-geprueft; Veröffentlichung separat",
   "businessImplemented": true,
   "fixture": "beispieldaten/bestellungen.csv",
   "format": "csv",
@@ -17,8 +17,12 @@
   "implementedScope": [
     "P01-T01",
     "P01-T02",
-    "P01-T03"
+    "P01-T03",
+    "P01-T04"
   ],
   "powerbiBericht": "bericht/Werkstatt.pbip",
-  "powerbiPruefung": "pruefungen/PowerBI_pruefen.ps1"
+  "powerbiPruefung": "pruefungen/PowerBI_pruefen.ps1",
+  "excelArbeitsmappe": "excel/Werkstatt.xlsm",
+  "excelQuelltext": "excel/Bestellpruefung.bas",
+  "gesamtabnahme": "pruefungen/abgleich_pruefen.py"
 }
