@@ -1,0 +1,63 @@
+{
+  "zeitpunkt": "2026-11-17T22:58:46.00753+00:00",
+  "zugriff": "Lesende ADOMD-DAX-Abfragen gegen tats\u00E4chlichen lokalen Power-BI-Desktop-Modellserver",
+  "port": 52224,
+  "erfolgreich": true,
+  "abfragen": {
+    "gesamt": "EVALUATE ROW(\u0022umsatz\u0022,[Gesamtumsatz],\u0022anzahl\u0022,[Bestellanzahl],\u0022roh\u0022,[Eingelesene Zeilen],\u0022abgelehnt\u0022,[Abgelehnte Anzahl])",
+    "monate": "EVALUATE SUMMARIZECOLUMNS(Bestellungen[Monat],\u0022umsatz\u0022,[Gesamtumsatz],\u0022anzahl\u0022,[Bestellanzahl]) ORDER BY Bestellungen[Monat]",
+    "kategorien": "EVALUATE SUMMARIZECOLUMNS(Bestellungen[Kategorie],\u0022umsatz\u0022,[Gesamtumsatz]) ORDER BY Bestellungen[Kategorie]",
+    "januarfilter": "EVALUATE CALCULATETABLE(ROW(\u0022umsatz\u0022,[Gesamtumsatz],\u0022anzahl\u0022,[Bestellanzahl]),TREATAS({\u00222026-01\u0022},Bestellungen[Monat]))",
+    "fehler": "EVALUATE SELECTCOLUMNS(\u0027Abgelehnte Zeilen\u0027,\u0022zeile\u0022,\u0027Abgelehnte Zeilen\u0027[Zeile],\u0022kennung\u0022,\u0027Abgelehnte Zeilen\u0027[Bestellkennung],\u0022fehler\u0022,\u0027Abgelehnte Zeilen\u0027[Fehler]) ORDER BY [zeile]"
+  },
+  "ergebnisse": {
+    "gesamt": [
+      {
+        "[umsatz]": 820,
+        "[anzahl]": 10,
+        "[roh]": 12,
+        "[abgelehnt]": 2
+      }
+    ],
+    "monate": [
+      {
+        "Bestellungen[Monat]": "2026-01",
+        "[umsatz]": 340,
+        "[anzahl]": 4
+      },
+      {
+        "Bestellungen[Monat]": "2026-02",
+        "[umsatz]": 480,
+        "[anzahl]": 6
+      }
+    ],
+    "kategorien": [
+      {
+        "Bestellungen[Kategorie]": "ersatzteile",
+        "[umsatz]": 320
+      },
+      {
+        "Bestellungen[Kategorie]": "wartung",
+        "[umsatz]": 500
+      }
+    ],
+    "januarfilter": [
+      {
+        "[umsatz]": 340,
+        "[anzahl]": 4
+      }
+    ],
+    "fehler": [
+      {
+        "[zeile]": 12,
+        "[kennung]": "B10",
+        "[fehler]": "Bestellkennung bereits in CSV-Zeile 11 vorhanden."
+      },
+      {
+        "[zeile]": 13,
+        "[kennung]": "",
+        "[fehler]": "Bestellkennung fehlt. Betrag fehlt."
+      }
+    ]
+  }
+}

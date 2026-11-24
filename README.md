@@ -4,7 +4,7 @@ Bestellungen einer Werkstatt enthalten Dubletten und fehlerhafte Beträge. Auswe
 
 ![Projektaufbau](dokumentation/ueberblick.svg)
 
-**Veröffentlichungsstand: Phase 2/4.** Dieses eigenständige Repository übernimmt zunächst den bereits lokal committeten Stand. Weitere fachliche Phasen werden im Abstand von mindestens vier Stunden veröffentlicht. Die technische Entwicklung und die öffentliche Veröffentlichung haben unterschiedliche echte Zeitpunkte.
+**Veröffentlichungsstand: Phase 3/4.** Dieses eigenständige Repository veröffentlicht zuvor lokal entwickelte, geprüfte und unveränderlich gesicherte Stände. Weitere fachliche Phasen werden im Abstand von mindestens vier Stunden veröffentlicht. Die technische Entwicklung und die öffentliche Veröffentlichung haben unterschiedliche echte Zeitpunkte.
 
 ## Was hier zu sehen ist
 
@@ -12,7 +12,7 @@ Bestellungen einer Werkstatt enthalten Dubletten und fehlerhafte Beträge. Auswe
 |---|---|---|
 | 1 | CSV-Vertrag und Datenqualität | Ja |
 | 2 | SQLite-Import und drei Auswertungen | Ja |
-| 3 | Power-BI-Bericht mit Power Query und DAX | Folgt |
+| 3 | Power-BI-Bericht mit Power Query und DAX | Ja |
 | 4 | Excel/VBA und Abgleich aller sieben Kennzahlen | Folgt |
 
 ## Demo
@@ -42,6 +42,8 @@ Im geklonten Repository ausführen; die benötigte Laufzeit muss installiert sei
 python -X utf8 src/arbeitsdatenbank.py
 python -X utf8 -m unittest discover -s tests -v
 ```
+
+Power BI: `bericht/Werkstatt.pbip` öffnen und vor der ersten Aktualisierung den Parameter `CsvDatei` auf die mitgelieferte lokale CSV setzen. Der private ursprüngliche Rechnerpfad ist in dieser Veröffentlichungskopie entfernt.
 
 Ausführliche technische Befehle: [START.md](START.md). [Öffentlicher Prüfstand](ABNAHME.json) und [Quellphasen](VERLAUF.json) dokumentieren Herkunft und echte Ausführungsdaten. Eine neue Repositorykopie ist kein neuer nativer Desktoplauf.
 

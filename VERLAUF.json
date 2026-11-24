@@ -4,6 +4,15 @@
     "ticket": "P01-T02",
     "quellcommit": "99eaa5713fac9706a20e5eff736b593282ba02fb",
     "lokal_committet_am": "2026-11-03T07:21:50+01:00",
+    "technisch_gesichert_am": "2026-11-01T23:04:42.098Z",
     "snapshot": "32a13eab41b6d519804041ac8230d0b4f57dc3318627c68d5062376deb26c65a"
+  },
+  {
+    "phase": 3,
+    "ticket": "P01-T03",
+    "quellcommit": null,
+    "lokal_committet_am": null,
+    "technisch_gesichert_am": "2026-11-17T23:05:18.799Z",
+    "snapshot": "7a9c6076c5658a56ac482f953605647ba75ef3c913753c5bd318140814b54f6b"
   }
 ]

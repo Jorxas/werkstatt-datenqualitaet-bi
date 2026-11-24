@@ -12,3 +12,7 @@ Die tatsächlich vorhandenen früheren Projektänderungen sind jetzt zusätzlich
 - Private Mailadressen der Git-Identität werden durch die GitHub-Noreply-Adresse desselben Kontos ersetzt. Lokale Pfade und private Nachweise sind ausgeschlossen.
 
 Die Entwicklung erfolgte mit KI-Unterstützung. Die Historie belegt gespeicherte Änderungen und keine behaupteten menschlichen Arbeitsstunden. Weitere bereits geprüfte Fachphasen erscheinen weiterhin mit dem tatsächlichen Veröffentlichungsdatum im vereinbarten Vierstundenabstand.
+
+## Weitere gesicherte Phasen ab 23. November 2026
+
+Spätere Phasen werden auch direkt aus zuvor geprüften unveränderlichen Snapshots veröffentlicht. Wo kein früherer lokaler Git-Commit existiert, steht in VERLAUF.json ausdrücklich null. Die vorhandene frühere Commitgeschichte bleibt erhalten; der neue Fachcommit verwendet seinen tatsächlichen heutigen Zeitpunkt.

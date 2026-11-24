@@ -1,16 +1,17 @@
 {
   "projekt": "P01",
-  "phase": 2,
-  "snapshot": "32a13eab41b6d519804041ac8230d0b4f57dc3318627c68d5062376deb26c65a",
-  "quellcommit": "99eaa5713fac9706a20e5eff736b593282ba02fb",
-  "lokal_committet_am": "2026-11-03T07:21:50+01:00",
-  "technisch_gesichert_am": "2026-11-01T23:00:12.675Z",
+  "phase": 3,
+  "snapshot": "7a9c6076c5658a56ac482f953605647ba75ef3c913753c5bd318140814b54f6b",
+  "quellcommit": null,
+  "lokal_committet_am": null,
+  "technisch_gesichert_am": "2026-11-17T23:05:18.799Z",
   "unveraenderlicher_quellstand_geprueft": true,
   "redaktionell_angepasst": [
     "START.md",
+    "bericht/Werkstatt.SemanticModel/model.bim",
     "nachweise/P01-T02-auswertungen.json",
     "nachweise/P01-T02-dateistand.json"
   ],
-  "hinweis": "Lokale Pfade in Berichten entfernt; Quellprogramme nicht übersetzt oder simuliert. Die erste öffentliche Übernahme ist kein nachträglich erfundener Entwicklungsschritt. Native Produktnachweise behalten ihre ursprünglichen tatsächlichen Zeiten.",
-  "veroeffentlichungskopie_fachlich_geprueft_am": "2026-11-18T15:20:18.424Z"
+  "hinweis": "Bereits zuvor entwickelte und geprüfte Phase; diese GitHub-Veröffentlichung hat ihr tatsächliches neues Datum. Kein historischer Git-Commit oder menschlicher Zeitaufwand erfunden.",
+  "quellart": "gepruefter-unveraenderlicher-snapshot"
 }

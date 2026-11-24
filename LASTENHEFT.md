@@ -14,8 +14,8 @@ Lokale Einzelbenutzung, synthetische Daten und ein vorführbarer kleiner Ablauf.
 
 - [x] A1 — Zwölf synthetische Bestellungen einlesen; Duplikat und ungültige Zeile mit Begründung ausweisen. P01-T01 am 31. Oktober 2026 geprüft; [Regeln und beobachtete Auffälligkeiten](DATENWOERTERBUCH.md).
 - [ ] A2 — SQL-Abfragen, Excel-Tabelle und Bericht liefern dieselben Summen.
-- [ ] A3 — Zwei DAX-Kennzahlen, Monatsfilter und eine Seite zur Datenqualität erstellen.
-- [ ] A4 — Den echten Power-BI-Bericht öffnen und die Power-Query-Schritte erklären.
+- [x] A3 — Zwei DAX-Kennzahlen, Monatsfilter und eine Seite zur Datenqualität erstellen.
+- [x] A4 — Den echten Power-BI-Bericht öffnen und die Power-Query-Schritte erklären.
 
 ## Voraussetzungen
 
@@ -44,3 +44,5 @@ Eine gültige Eingabe, einen Fehlerfall, das Ergebnis und die zuständige Quellc
 Eigenes Lernprojekt zu Datenqualität und Berichten; Power BI, DAX und VBA erst nach tatsächlicher Ausführung nennen.
 
 Derzeit zutreffend: „Eigenes Lernprojekt in Vorbereitung: Datenqualität und Kennzahlen einer Werkstatt“. „Umgesetzt“ setzt die tatsächliche Abnahme voraus.
+
+P01-T03: echte Desktop-Ausführung, Speicherung, erneutes Öffnen, fünf DAX-Abfragen und sichtbarer Januarfilter am 17./18. November 2026 geprüft. A2 wartet auf Excel/VBA.

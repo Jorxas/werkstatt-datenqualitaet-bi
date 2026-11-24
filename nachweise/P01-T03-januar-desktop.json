@@ -1,0 +1,27 @@
+{
+  "zeitpunkt": "2026-11-17T23:00:48.906Z",
+  "fenster": {
+    "app": "Microsoft.MicrosoftPowerBIDesktop_8wekyb3d8bbwe!Microsoft.MicrosoftPowerBIDesktop",
+    "id": 792046,
+    "title": "Unbenannt – Power BI Desktop"
+  },
+  "bildschirm": [
+    {
+      "height": 1032,
+      "id": "screenshot-0",
+      "originX": 2560,
+      "originY": 0,
+      "width": 1920,
+      "zIndex": 0
+    },
+    {
+      "height": 25,
+      "id": "screenshot-1",
+      "originX": 2681,
+      "originY": 518,
+      "width": 60,
+      "zIndex": 1
+    }
+  ],
+  "beobachtung": "Monatsfilter Januar ausgewählt: 340 EUR, vier Bestellungen, Kategorien 160 und 180 EUR; zweiter Bildschirm."
+}

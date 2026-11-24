@@ -1,0 +1,209 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "monatsumsatz",
+  "position": {
+    "x": 40,
+    "y": 400,
+    "z": 1000,
+    "height": 280,
+    "width": 580,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Bestellungen"
+                    }
+                  },
+                  "Property": "Monat"
+                }
+              },
+              "queryRef": "Bestellungen.Monat",
+              "nativeQueryRef": "Monat"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Bestellungen"
+                    }
+                  },
+                  "Property": "Gesamtumsatz"
+                }
+              },
+              "queryRef": "Bestellungen.Gesamtumsatz",
+              "nativeQueryRef": "Gesamtumsatz"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Bestellungen"
+                    }
+                  },
+                  "Property": "Bestellanzahl"
+                }
+              },
+              "queryRef": "Bestellungen.Bestellanzahl",
+              "nativeQueryRef": "Bestellanzahl"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Umsatz nach Monat'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "40ea0560e902dcb769ba",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Bestellungen"
+              }
+            },
+            "Property": "Monat"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "800ecddb00c5be0d4b56",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Bestellungen"
+              }
+            },
+            "Property": "Gesamtumsatz"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ed6d6c0de4e172cbb034",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Bestellungen"
+              }
+            },
+            "Property": "Bestellanzahl"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
